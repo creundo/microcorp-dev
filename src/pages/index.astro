@@ -7,7 +7,6 @@ import Logo from '../components/Logo.astro';
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content="Micro Corp - Built by AI, Directed by Humans. Automated SaaS ecosystem part of Macro Corporate Global Alliance Oy." />
@@ -76,8 +75,80 @@ import Logo from '../components/Logo.astro';
 			</div>
 		</section>
 
-		<!-- Products Section - "The Engine" - COMMENTED OUT FOR FUTURE USE -->
-		<!-- 
+		<!-- Manifesto Section -->
+		<section id="manifesto" class="py-20 px-4 bg-gradient-to-b from-slate-50 to-white">
+			<div class="max-w-4xl mx-auto">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">The Alliance Manifesto</h2>
+					<p class="text-xl text-blue-600 font-semibold">Macro Vision, Micro Action.</p>
+				</div>
+
+				<div class="bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 md:p-12 space-y-8">
+					<p class="text-lg text-slate-700 leading-relaxed">
+						We do not just build software. We build an autonomous ecosystem designed to transform a complex world into manageable, high-impact solutions. The world moves too fast for a single human, yet it remains too nuanced for a machine alone.
+					</p>
+					<p class="text-lg font-semibold text-slate-900">
+						This is why the Alliance exists.
+					</p>
+
+					<div class="space-y-6">
+						<div class="transition-all hover:translate-x-1 hover:opacity-100 opacity-90">
+							<h3 class="text-2xl font-bold text-slate-900 mb-3">1. Built by AI, Directed by Humans</h3>
+							<p class="text-slate-700 leading-relaxed">
+								Artificial Intelligence is our engine; the human mind is the navigator. We harness LLM models and autonomous agents to perform the heavy lifting—analyzing data, writing code, and generating content. But every bit passes through a "Human Helping Hand." We do not outsource responsibility to the machine; we multiply our capabilities through it.
+							</p>
+						</div>
+
+						<div class="transition-all hover:translate-x-1 hover:opacity-100 opacity-90">
+							<h3 class="text-2xl font-bold text-slate-900 mb-3">2. The Power of the Micro</h3>
+							<p class="text-slate-700 leading-relaxed mb-3">
+								We believe in micro-services, micro-enterprises, and micro-steps. Micro Corp is our incubator, where ideas evolve into independent, modular tools. If a tool is valuable to us, it becomes a product for the world.
+							</p>
+							<ul class="space-y-2 text-slate-700">
+								<li class="flex items-start gap-2">
+									<span class="text-blue-600 mt-1">•</span>
+									<span><strong>EchoForge</strong> creates the voice.</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-blue-600 mt-1">•</span>
+									<span><strong>ImageForge</strong> gives it a face.</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-blue-600 mt-1">•</span>
+									<span><strong>Quillstone</strong> ensures the quality.</span>
+								</li>
+							</ul>
+							<p class="text-slate-700 leading-relaxed mt-3">
+							Together, they form the Alliance, a force greater than the sum of its parts. The Alliance continuously explores emerging satellite technologies to stay at innovation's edge.
+							</p>
+						</div>
+
+						<div class="transition-all hover:translate-x-1 hover:opacity-100 opacity-90">
+							<h3 class="text-2xl font-bold text-slate-900 mb-3">3. Precision Over Noise</h3>
+							<p class="text-slate-700 leading-relaxed">
+							From our investment strategy to our content marketing, our principle remains the same: A <span class="text-blue-600 font-semibold">10% return</span> requires <span class="text-blue-600 font-semibold">100% precision</span>. We do not chase hype; we build sustainable "Growth Engines." As part of the Alliance, every tool and every invested euro serves the pursuit of long-term wealth and freedom.
+						</p>
+					</div>
+
+					<div class="transition-all hover:translate-x-1 hover:opacity-100 opacity-90">
+						<h3 class="text-2xl font-bold text-slate-900 mb-3">4. Zero Ops, <span class="text-blue-600">Maximum Impact</span></h3>
+							<p class="text-slate-700 leading-relaxed">
+								Our goal is frictionless growth. We build systems that operate while we sleep—scaling on the edge with Cloudflare, free from server maintenance or unnecessary bureaucracy.
+							</p>
+						</div>
+					</div>
+
+					<blockquote class="border-l-4 border-blue-600 pl-6 py-2 italic text-xl text-slate-900 mt-8">
+						"We don't just invest in the future. We code it."
+					</blockquote>
+					<p class="text-right text-slate-600 font-semibold">
+						— Macro Corporate Global Alliance Oy
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Products Section - "The Engine" -->
 		<section id="products" class="py-20 px-4 max-w-7xl mx-auto">
 			<div class="text-center mb-16">
 				<h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">The Engine</h2>
@@ -111,7 +182,7 @@ import Logo from '../components/Logo.astro';
 					</span>
 				</div>
 
-				<div class="md:col-span-1 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
+				<a href="https://pathrefine.dev" target="_blank" rel="noopener noreferrer" class="md:col-span-1 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
 						<div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl mb-3 flex items-center justify-center text-white font-bold">P</div>
 						<h3 class="text-xl font-bold text-slate-900 mb-1">PathRefine</h3>
@@ -119,9 +190,9 @@ import Logo from '../components/Logo.astro';
 					</div>
 					<span class="inline-flex items-center gap-1 text-xs text-emerald-600 font-medium">
 						<span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
-						Live • €19/yr
+						Live
 					</span>
-				</div>
+				</a>
 
 				<div class="md:col-span-1 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
@@ -172,87 +243,16 @@ import Logo from '../components/Logo.astro';
 				</div>
 			</div>
 		</section>
-		-->
-
-		<!-- Manifesto Section -->
-		<section id="manifesto" class="py-20 px-4 bg-gradient-to-b from-slate-50 to-white">
-			<div class="max-w-4xl mx-auto">
-				<div class="text-center mb-12">
-					<h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">The Alliance Manifesto</h2>
-					<p class="text-xl text-blue-600 font-semibold">Macro Vision, Micro Action.</p>
-				</div>
-
-				<div class="bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 md:p-12 space-y-8">
-					<p class="text-lg text-slate-700 leading-relaxed">
-						We do not just build software. We build an autonomous ecosystem designed to transform a complex world into manageable, high-impact solutions. The world moves too fast for a single human, yet it remains too nuanced for a machine alone.
-					</p>
-					<p class="text-lg font-semibold text-slate-900">
-						This is why the Alliance exists.
-					</p>
-
-					<div class="space-y-6">
-						<div>
-							<h3 class="text-2xl font-bold text-slate-900 mb-3">1. Built by AI, Directed by Humans</h3>
-							<p class="text-slate-700 leading-relaxed">
-								Artificial Intelligence is our engine; the human mind is the navigator. We harness LLM models and autonomous agents to perform the heavy lifting—analyzing data, writing code, and generating content. But every bit passes through a "Human Helping Hand." We do not outsource responsibility to the machine; we multiply our capabilities through it.
-							</p>
-						</div>
-
-						<div>
-							<h3 class="text-2xl font-bold text-slate-900 mb-3">2. The Power of the Micro</h3>
-							<p class="text-slate-700 leading-relaxed mb-3">
-								We believe in micro-services, micro-enterprises, and micro-steps. Micro Corp is our incubator, where ideas evolve into independent, modular tools. If a tool is valuable to us, it becomes a product for the world.
-							</p>
-							<ul class="space-y-2 text-slate-700">
-								<li class="flex items-start gap-2">
-									<span class="text-blue-600 mt-1">•</span>
-									<span><strong>EchoForge</strong> creates the voice.</span>
-								</li>
-								<li class="flex items-start gap-2">
-									<span class="text-blue-600 mt-1">•</span>
-									<span><strong>ImageForge</strong> gives it a face.</span>
-								</li>
-								<li class="flex items-start gap-2">
-									<span class="text-blue-600 mt-1">•</span>
-									<span><strong>Quillstone</strong> ensures the quality.</span>
-								</li>
-							</ul>
-							<p class="text-slate-700 leading-relaxed mt-3">
-								Together, they form the Alliance, a force greater than the sum of its parts.
-							</p>
-						</div>
-
-						<div>
-							<h3 class="text-2xl font-bold text-slate-900 mb-3">3. Precision Over Noise</h3>
-							<p class="text-slate-700 leading-relaxed">
-								From our investment strategy to our content marketing, our principle remains the same: A 10% return requires 100% precision. We do not chase hype; we build sustainable "Growth Engines." As part of the Alliance, every tool and every invested euro serves the pursuit of long-term wealth and freedom.
-							</p>
-						</div>
-
-						<div>
-							<h3 class="text-2xl font-bold text-slate-900 mb-3">4. Zero Ops, Maximum Impact</h3>
-							<p class="text-slate-700 leading-relaxed">
-								Our goal is frictionless growth. We build systems that operate while we sleep—scaling on the edge with Cloudflare, free from server maintenance or unnecessary bureaucracy.
-							</p>
-						</div>
-					</div>
-
-					<blockquote class="border-l-4 border-blue-600 pl-6 py-2 italic text-xl text-slate-900 mt-8">
-						"We don't just invest in the future. We code it."
-					</blockquote>
-					<p class="text-right text-slate-600 font-semibold">
-						— Macro Corporate Global Alliance Oy
-					</p>
-				</div>
-			</div>
-		</section>
 
 		<!-- Footer -->
 		<footer class="py-12 px-4 bg-slate-900 text-white">
 			<div class="max-w-7xl mx-auto">
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
 					<div>
-						<h3 class="text-2xl font-bold mb-4">Micro Corp</h3>
+						<div class="flex items-center gap-3 mb-4">
+							<Logo size="40" />
+							<h3 class="text-2xl font-semibold tracking-widest" style="font-family: 'Space Grotesk', sans-serif;">Micro Corp</h3>
+						</div>
 						<p class="text-slate-400">
 							Autonomous systems for the modern era. Building the future, one micro-step at a time.
 						</p>
@@ -262,8 +262,11 @@ import Logo from '../components/Logo.astro';
 						<ul class="space-y-2 text-slate-400">
 							<li><a href="#products" class="hover:text-white transition-colors">EchoForge</a></li>
 							<li><a href="#products" class="hover:text-white transition-colors">ImageForge</a></li>
-							<li><a href="#products" class="hover:text-white transition-colors">PathRefine</a></li>
-							<li><a href="#products" class="hover:text-white transition-colors">Quillstone</a></li>
+						<li><a href="https://pathrefine.dev" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">PathRefine</a></li>
+						<li><a href="#products" class="hover:text-white transition-colors">Quillstone</a></li>
+						<li><a href="#products" class="hover:text-white transition-colors">Affiguard</a></li>
+						<li><a href="#products" class="hover:text-white transition-colors">Hype Cycle</a></li>
+						<li><a href="#products" class="hover:text-white transition-colors">OmniVocal</a></li>
 						</ul>
 					</div>
 					<div>
@@ -284,6 +287,12 @@ import Logo from '../components/Logo.astro';
 					</p>
 					<p class="mt-4 text-sm">
 						© {new Date().getFullYear()} Macro Corporate Global Alliance Oy. Taking the Macro to the Micro.
+					</p>
+					<p class="mt-2 text-xs font-mono text-slate-500">
+						Build: 2026.02 // Status: Scaling
+					</p>
+					<p class="mt-3 text-[10px] font-mono text-slate-700">
+						Portfolio Layer 02: Growth Engine Active
 					</p>
 				</div>
 			</div>
