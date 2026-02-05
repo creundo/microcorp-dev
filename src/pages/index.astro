@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Logo from '../components/Logo.astro';
 ---
 
 <html lang="en">
@@ -13,9 +14,36 @@ import '../styles/global.css';
 		<title>Micro Corp - The Light Side of Automation</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 	</head>
 	<body class="bg-slate-50 text-slate-900">
+		<!-- Header -->
+		<header class="absolute top-0 left-0 right-0 z-20 px-8 py-8">
+			<div class="flex items-center justify-between">
+				<!-- Logo Left -->
+				<div class="flex items-center gap-3">
+					<Logo size="40" />
+					<span class="text-xl font-semibold text-slate-900 tracking-widest" style="font-family: 'Space Grotesk', sans-serif;">Micro Corp</span>
+				</div>
+
+				<!-- Status Right -->
+				<div class="hidden md:flex items-center gap-4">
+					<div class="h-4 w-[1px] bg-slate-300"></div>
+					
+					<div class="flex items-center gap-2">
+						<span class="relative flex h-2 w-2">
+							<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+							<span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+						</span>
+						
+						<span class="text-[11px] font-mono uppercase tracking-[0.2em] text-slate-500">
+							System: Autonomous
+						</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
 		<!-- Hero Section -->
 		<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
 			<!-- Glassmorphism Background Blobs -->
@@ -23,18 +51,19 @@ import '../styles/global.css';
 			<div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-indigo-100 rounded-full blur-[120px] opacity-50"></div>
 
 			<div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
-				<span class="text-blue-600 font-semibold tracking-widest uppercase text-sm">Micro Corp — Precision through Automation</span>
 				<h1 class="mt-4 text-6xl md:text-8xl font-extrabold text-slate-900 tracking-tighter leading-tight">
 					Built by AI. <br/>
 					<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
 						Directed by Humans.
 					</span>
 				</h1>
-				<p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
+				<p class="mt-6 text-base md:text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
 					Automated SaaS ecosystem. Part of Macro Corporate Global Alliance Oy. 
-					We turn macro vision into micro execution.
+					We turn Macro vision into Micro execution.
 				</p>
 				
+				<!-- CTA Buttons - COMMENTED OUT FOR FUTURE USE -->
+				<!-- 
 				<div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
 					<a href="#products" class="px-8 py-3 bg-slate-900 text-white rounded-full font-medium hover:bg-blue-600 transition-all shadow-xl">
 						Explore Products
@@ -43,19 +72,19 @@ import '../styles/global.css';
 						Our Manifesto
 					</a>
 				</div>
+				-->
 			</div>
 		</section>
 
-		<!-- Products Section - Bento Grid -->
+		<!-- Products Section - "The Engine" - COMMENTED OUT FOR FUTURE USE -->
+		<!-- 
 		<section id="products" class="py-20 px-4 max-w-7xl mx-auto">
 			<div class="text-center mb-16">
 				<h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">The Engine</h2>
 				<p class="text-lg text-slate-600">Autonomous tools that power the Alliance</p>
 			</div>
 
-			<!-- Bento Grid Layout -->
-		<div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[240px]">
-				<!-- EchoForge - Large Card -->
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[240px]">
 				<div class="md:col-span-2 md:row-span-2 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
 						<div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl mb-4 flex items-center justify-center text-white font-bold text-xl">E</div>
@@ -70,7 +99,6 @@ import '../styles/global.css';
 					</div>
 				</div>
 
-				<!-- ImageForge - Medium Card -->
 				<div class="md:col-span-2 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
 						<div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl mb-4 flex items-center justify-center text-white font-bold text-xl">I</div>
@@ -83,7 +111,6 @@ import '../styles/global.css';
 					</span>
 				</div>
 
-				<!-- PathRefine - Small Card -->
 				<div class="md:col-span-1 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
 						<div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl mb-3 flex items-center justify-center text-white font-bold">P</div>
@@ -96,7 +123,6 @@ import '../styles/global.css';
 					</span>
 				</div>
 
-				<!-- Quillstone - Small Card -->
 				<div class="md:col-span-1 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
 						<div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl mb-3 flex items-center justify-center text-white font-bold">Q</div>
@@ -109,7 +135,6 @@ import '../styles/global.css';
 					</span>
 				</div>
 
-				<!-- Affiguard - Medium Card -->
 				<div class="md:col-span-2 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
 						<div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl mb-4 flex items-center justify-center text-white font-bold text-xl">A</div>
@@ -122,7 +147,6 @@ import '../styles/global.css';
 					</span>
 				</div>
 
-				<!-- Hype Cycle - Small Card -->
 				<div class="md:col-span-1 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
 						<div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl mb-3 flex items-center justify-center text-white font-bold">H</div>
@@ -135,7 +159,6 @@ import '../styles/global.css';
 					</span>
 				</div>
 
-				<!-- OmniVocal - Small Card -->
 				<div class="md:col-span-1 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
 						<div class="w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl mb-3 flex items-center justify-center text-white font-bold">O</div>
@@ -149,6 +172,7 @@ import '../styles/global.css';
 				</div>
 			</div>
 		</section>
+		-->
 
 		<!-- Manifesto Section -->
 		<section id="manifesto" class="py-20 px-4 bg-gradient-to-b from-slate-50 to-white">
@@ -259,7 +283,7 @@ import '../styles/global.css';
 						<span class="text-white font-semibold">Macro Corporate Global Alliance Oy</span>.
 					</p>
 					<p class="mt-4 text-sm">
-						© {new Date().getFullYear()} Macro Corporate Global Alliance Oy. Taking the macro to the micro.
+						© {new Date().getFullYear()} Macro Corporate Global Alliance Oy. Taking the Macro to the Micro.
 					</p>
 				</div>
 			</div>
