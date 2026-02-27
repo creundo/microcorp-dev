@@ -107,11 +107,11 @@ import Logo from '../components/Logo.astro';
 							<ul class="space-y-2 text-slate-700">
 								<li class="flex items-start gap-2">
 									<span class="text-blue-600 mt-1">•</span>
-									<span><strong>EchoForge</strong> creates the voice.</span>
-								</li>
-								<li class="flex items-start gap-2">
-									<span class="text-blue-600 mt-1">•</span>
-									<span><strong>ImageForge</strong> gives it a face.</span>
+								<span><strong>EditorInChief</strong> creates the content.</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-blue-600 mt-1">•</span>
+								<span><strong>OmniVocal</strong> distributes the message.</span>
 								</li>
 								<li class="flex items-start gap-2">
 									<span class="text-blue-600 mt-1">•</span>
@@ -156,37 +156,40 @@ import Logo from '../components/Logo.astro';
 			</div>
 
 			<div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[240px]">
-				<div class="md:col-span-2 md:row-span-2 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
+				<!-- OmniVocal -->
+				<a href="https://omnivocal.io" target="_blank" rel="noopener noreferrer" class="md:col-span-2 md:row-span-2 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
-						<div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl mb-4 flex items-center justify-center text-white font-bold text-xl">E</div>
-						<h3 class="text-2xl font-bold text-slate-900 mb-2">EchoForge</h3>
-						<p class="text-slate-600">Automated content producer. The voice of the Alliance, generating precise narratives at scale.</p>
+						<div class="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl mb-4 flex items-center justify-center text-white font-bold text-xl">O</div>
+						<h3 class="text-2xl font-bold text-slate-900 mb-2">OmniVocal</h3>
+						<p class="text-slate-600">Multi-platform social media distribution. Publish once, reach everywhere. The publishing engine of the Alliance.</p>
 					</div>
 					<div class="mt-4">
 						<span class="inline-flex items-center gap-2 text-sm text-blue-600 font-medium">
 							<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-							Active
+							omnivocal.io
 						</span>
 					</div>
-				</div>
+				</a>
 
-				<div class="md:col-span-2 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
+				<!-- EditorInChief -->
+				<a href="https://editorinchief.io" target="_blank" rel="noopener noreferrer" class="md:col-span-2 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
-						<div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl mb-4 flex items-center justify-center text-white font-bold text-xl">I</div>
-						<h3 class="text-2xl font-bold text-slate-900 mb-2">ImageForge</h3>
-						<p class="text-slate-600">AI & stock image sourcing. Visual asset factory for content needs.</p>
+						<div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl mb-4 flex items-center justify-center text-white font-bold text-xl">E</div>
+						<h3 class="text-2xl font-bold text-slate-900 mb-2">EditorInChief</h3>
+						<p class="text-slate-600">AI content creation engine. Editorial workflow automation at scale.</p>
 					</div>
 					<span class="inline-flex items-center gap-2 text-sm text-blue-600 font-medium">
 						<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-						Active
+						editorinchief.io
 					</span>
-				</div>
+				</a>
 
+				<!-- PathRefine -->
 				<a href="https://pathrefine.dev" target="_blank" rel="noopener noreferrer" class="md:col-span-1 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
 						<div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl mb-3 flex items-center justify-center text-white font-bold">P</div>
 						<h3 class="text-xl font-bold text-slate-900 mb-1">PathRefine</h3>
-						<p class="text-sm text-slate-600">Asset optimizer</p>
+						<p class="text-sm text-slate-600">SVG editor & optimizer</p>
 					</div>
 					<span class="inline-flex items-center gap-1 text-xs text-emerald-600 font-medium">
 						<span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
@@ -194,53 +197,44 @@ import Logo from '../components/Logo.astro';
 					</span>
 				</a>
 
-				<div class="md:col-span-1 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
+				<!-- Quillstone -->
+				<a href="https://quillstone.dev" target="_blank" rel="noopener noreferrer" class="md:col-span-1 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
 						<div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl mb-3 flex items-center justify-center text-white font-bold">Q</div>
 						<h3 class="text-xl font-bold text-slate-900 mb-1">Quillstone</h3>
-						<p class="text-sm text-slate-600">Quality guard</p>
+						<p class="text-sm text-slate-600">Content quality platform</p>
 					</div>
-					<span class="inline-flex items-center gap-1 text-xs text-slate-500 font-medium">
+					<span class="inline-flex items-center gap-1 text-xs text-amber-600 font-medium">
 						<span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
-						In Development
+						Beta
 					</span>
-				</div>
+				</a>
 
-				<div class="md:col-span-2 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
+				<!-- SemiTruth -->
+				<a href="https://semitruth.com" target="_blank" rel="noopener noreferrer" class="md:col-span-2 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
-						<div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl mb-4 flex items-center justify-center text-white font-bold text-xl">A</div>
-						<h3 class="text-2xl font-bold text-slate-900 mb-2">Affiguard</h3>
-						<p class="text-slate-600">Affiliate link health monitoring. Revenue protection at scale.</p>
+						<div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl mb-4 flex items-center justify-center text-white font-bold text-xl">S</div>
+						<h3 class="text-2xl font-bold text-slate-900 mb-2">SemiTruth</h3>
+						<p class="text-slate-600">AI-generated satire publication. The truth is out there, SemiTruth is in here. Powered by EditorInChief & OmniVocal.</p>
 					</div>
-					<span class="inline-flex items-center gap-2 text-sm text-slate-500 font-medium">
-						<span class="w-2 h-2 bg-amber-500 rounded-full"></span>
-						Planned
+					<span class="inline-flex items-center gap-2 text-sm text-blue-600 font-medium">
+						<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+						semitruth.com
 					</span>
-				</div>
+				</a>
 
-				<div class="md:col-span-1 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
+				<!-- Wowed -->
+				<a href="https://wowed.dev" target="_blank" rel="noopener noreferrer" class="md:col-span-2 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
 					<div>
-						<div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl mb-3 flex items-center justify-center text-white font-bold">H</div>
-						<h3 class="text-xl font-bold text-slate-900 mb-1">Hype Cycle</h3>
-						<p class="text-sm text-slate-600">Trend intel</p>
+						<div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mb-4 flex items-center justify-center text-white font-bold text-xl">W</div>
+						<h3 class="text-2xl font-bold text-slate-900 mb-2">Wowed</h3>
+						<p class="text-slate-600">Get wowed. Get discovered. Social proof widget that puts builders on the map. One click from visitors, continuous discovery for you.</p>
 					</div>
-					<span class="inline-flex items-center gap-1 text-xs text-slate-500 font-medium">
-						<span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
-						Planned
+					<span class="inline-flex items-center gap-2 text-sm text-emerald-600 font-medium">
+						<span class="w-2 h-2 bg-green-500 rounded-full"></span>
+						wowed.dev
 					</span>
-				</div>
-
-				<div class="md:col-span-1 bg-white/40 backdrop-blur-xl rounded-xl border border-white/30 shadow-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-transform">
-					<div>
-						<div class="w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl mb-3 flex items-center justify-center text-white font-bold">O</div>
-						<h3 class="text-xl font-bold text-slate-900 mb-1">OmniVocal</h3>
-						<p class="text-sm text-slate-600">Social distribution</p>
-					</div>
-					<span class="inline-flex items-center gap-1 text-xs text-slate-500 font-medium">
-						<span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
-						Planned
-					</span>
-				</div>
+				</a>
 			</div>
 		</section>
 
@@ -260,13 +254,12 @@ import Logo from '../components/Logo.astro';
 					<div>
 						<h4 class="font-semibold mb-4">Products</h4>
 						<ul class="space-y-2 text-slate-400">
-							<li><a href="#products" class="hover:text-white transition-colors">EchoForge</a></li>
-							<li><a href="#products" class="hover:text-white transition-colors">ImageForge</a></li>
+						<li><a href="https://omnivocal.io" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">OmniVocal</a></li>
+						<li><a href="https://editorinchief.io" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">EditorInChief</a></li>
 						<li><a href="https://pathrefine.dev" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">PathRefine</a></li>
-						<li><a href="#products" class="hover:text-white transition-colors">Quillstone</a></li>
-						<li><a href="#products" class="hover:text-white transition-colors">Affiguard</a></li>
-						<li><a href="#products" class="hover:text-white transition-colors">Hype Cycle</a></li>
-						<li><a href="#products" class="hover:text-white transition-colors">OmniVocal</a></li>
+						<li><a href="https://quillstone.dev" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Quillstone</a></li>
+						<li><a href="https://semitruth.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">SemiTruth</a></li>
+						<li><a href="https://wowed.dev" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Wowed</a></li>
 						</ul>
 					</div>
 					<div>
@@ -283,10 +276,10 @@ import Logo from '../components/Logo.astro';
 					</p>
 					<p>
 						Part of <span class="text-white font-semibold">Micro Corp</span>, a division of 
-						<span class="text-white font-semibold">Macro Corporate Global Alliance Oy</span>.
+						<span class="text-white font-semibold">Macro Corporate Global Alliance</span>.
 					</p>
 					<p class="mt-4 text-sm">
-						© {new Date().getFullYear()} Macro Corporate Global Alliance Oy. Taking the Macro to the Micro.
+						© {new Date().getFullYear()} Macro Corporate Global Alliance. Taking the Macro to the Micro.
 					</p>
 					<p class="mt-2 text-xs font-mono text-slate-500">
 						Build: 2026.02 // Status: Scaling
