@@ -1,0 +1,369 @@
+---
+import '../styles/global.css';
+import Logo from '../components/Logo.astro';
+
+const EFFECTIVE_DATE = "6 March 2026";
+const CONTROLLER = "Zero Ops Oy (Zero Ops Ltd)";
+const BUSINESS_ID = "3606514-8";
+const LEGAL_EMAIL = "legal@microcorp.dev";
+const PRIVACY_EMAIL = "privacy@microcorp.dev";
+const CANONICAL_URL = "https://microcorp.dev/terms";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={CANONICAL_URL} />
+    <meta name="description" content="Zero Ops Oy Terms of Service — governing all Micro Corp and Macro Corp services." />
+    <title>Terms of Service — Micro Corp / Zero Ops Oy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, nav span { font-family: 'Space Grotesk', sans-serif; }
+      .legal-body h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700; color: #0f172a; }
+      .legal-body h3 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; font-weight: 600; color: #1e293b; }
+      .legal-body p { margin-bottom: 0.875rem; line-height: 1.75; color: #475569; }
+      .legal-body ul, .legal-body ol { margin: 0.75rem 0 0.875rem 1.5rem; color: #475569; line-height: 1.75; }
+      .legal-body li { margin-bottom: 0.35rem; }
+      .legal-body table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.875rem; }
+      .legal-body th { background: #f1f5f9; padding: 0.625rem 0.875rem; text-align: left; font-weight: 600; color: #334155; border: 1px solid #e2e8f0; }
+      .legal-body td { padding: 0.625rem 0.875rem; border: 1px solid #e2e8f0; color: #475569; vertical-align: top; }
+      .legal-body a { color: #2563eb; text-decoration: underline; }
+      .note-box { background: #f0f9ff; border-left: 3px solid #38bdf8; padding: 0.875rem 1rem; margin: 1rem 0; border-radius: 0 6px 6px 0; font-size: 0.875rem; color: #0369a1; }
+      .warn-box { background: #fff7ed; border-left: 3px solid #fb923c; padding: 0.875rem 1rem; margin: 1rem 0; border-radius: 0 6px 6px 0; font-size: 0.875rem; color: #9a3412; }
+      .important-box { background: #fef2f2; border-left: 3px solid #f87171; padding: 0.875rem 1rem; margin: 1rem 0; border-radius: 0 6px 6px 0; font-size: 0.875rem; color: #991b1b; }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-20 bg-white/90 backdrop-blur border-b border-slate-200 px-6 py-4">
+      <div class="max-w-4xl mx-auto flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+          <Logo size="28" />
+          <span class="text-base font-semibold text-slate-900 tracking-widest">Micro Corp</span>
+        </a>
+        <a href="/" class="text-sm text-slate-500 hover:text-slate-900 transition-colors">← Back to Home</a>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="max-w-4xl mx-auto px-6 py-16">
+      <div class="mb-10">
+        <p class="text-xs font-mono uppercase tracking-widest text-blue-600 mb-3">Zero Ops Oy · Y-tunnus {BUSINESS_ID}</p>
+        <h1 class="text-4xl font-bold text-slate-900 mb-3">Terms of Service</h1>
+        <p class="text-slate-500 text-sm">
+          Effective date: {EFFECTIVE_DATE} &nbsp;·&nbsp;
+          Canonical URL: <a href={CANONICAL_URL} class="text-blue-600 underline">{CANONICAL_URL}</a>
+        </p>
+        <div class="note-box mt-6">
+          These Terms of Service ("Terms") govern your use of all websites, applications, APIs, and services operated by <strong>Zero Ops Oy (Zero Ops Ltd)</strong> under the Micro Corp and Macro Corp brands, including but not limited to: microcorp.dev, macrocorp.dev, Omnivocal, Quillstone, PathRefine, Affiguard, Wowed, Reakt.click, EditorInChief, Semitruth, AlphaDog, ChinaTech.news, and PlotTwist (collectively, the "Services"). By creating an account, accessing, or using any Service you agree to be bound by these Terms.
+        </div>
+        <div class="warn-box">
+          <strong>Consumers in the European Union and Finland:</strong> Where applicable law in your country of residence grants you mandatory rights as a consumer that cannot be excluded or limited by contract, nothing in these Terms limits those rights. In particular, the Finnish Consumer Protection Act (Kuluttajansuojalaki 38/1978) and EU Consumer Rights Directive (2011/83/EU) rights apply to you in full.
+        </div>
+      </div>
+
+      <div class="legal-body">
+
+        <!-- ── 1. Acceptance ─────────────────────────────── -->
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using any Service, you represent that you have read, understood, and agree to be bound by these Terms and our <a href="/privacy">Privacy Policy</a>, which is incorporated herein by reference. If you do not agree to these Terms, you must not use the Services.</p>
+        <p>Where a Service requires account registration, you accept these Terms by completing the registration process ("clickwrap acceptance"). For API-only access, your first authenticated API call constitutes acceptance. We recommend retaining a copy of these Terms for your records.</p>
+
+        <!-- ── 2. Definitions ────────────────────────────── -->
+        <h2>2. Definitions</h2>
+        <table>
+          <tr><th>Term</th><th>Meaning</th></tr>
+          <tr><td><strong>"We", "Us", "Our"</strong></td><td>Zero Ops Oy (Zero Ops Ltd), Business ID {BUSINESS_ID}, incorporated in Finland.</td></tr>
+          <tr><td><strong>"Services"</strong></td><td>All products, platforms, APIs, websites, plugins, and tools operated by Zero Ops Oy, as listed in the preamble above.</td></tr>
+          <tr><td><strong>"User", "You"</strong></td><td>A natural person or legal entity that accesses or uses any Service under these Terms.</td></tr>
+          <tr><td><strong>"Consumer"</strong></td><td>A natural person acting outside of their trade, business, or profession.</td></tr>
+          <tr><td><strong>"Account"</strong></td><td>The registered user account that grants access to authenticated features of a Service.</td></tr>
+          <tr><td><strong>"Content"</strong></td><td>Any text, data, URLs, documents, code, images, reactions, votes, or other material submitted by You to a Service.</td></tr>
+          <tr><td><strong>"AI-Generated Content"</strong></td><td>Any content produced in full or in part by an artificial intelligence system operated by or integrated into a Service.</td></tr>
+          <tr><td><strong>"Subscription"</strong></td><td>A recurring paid access plan to a Service, processed by Paddle.com Market Ltd as Merchant of Record.</td></tr>
+          <tr><td><strong>"Service Supplement"</strong></td><td>A product-specific addendum in Section 9 of these Terms that governs additional terms applicable to a particular Service.</td></tr>
+          <tr><td><strong>"Paddle"</strong></td><td>Paddle.com Market Ltd, the Merchant of Record for all paid Subscriptions offered by Zero Ops Oy.</td></tr>
+        </table>
+
+        <!-- ── 3. Eligibility ────────────────────────────── -->
+        <h2>3. Eligibility</h2>
+        <p>To access or use the Services, you must:</p>
+        <ul>
+          <li>Be at least <strong>16 years of age</strong>. If you are between 13 and 15 years of age and located in a jurisdiction where national law has reduced the GDPR consent age below 16, you may only use the Services with documented consent from a parent or legal guardian.</li>
+          <li>Have the legal capacity to enter into a binding contract in your jurisdiction.</li>
+          <li>Not be barred from receiving Services under applicable law, including applicable sanctions regulations.</li>
+        </ul>
+        <p>If you are using the Services on behalf of an organisation, you represent that you have authority to bind that organisation to these Terms.</p>
+
+        <!-- ── 4. Account Registration & Security ────────── -->
+        <h2>4. Account Registration and Security</h2>
+        <p>Certain Services require you to create an Account. You agree to:</p>
+        <ul>
+          <li>Provide accurate, current, and complete registration information.</li>
+          <li>Maintain the accuracy of your information and update it promptly when it changes.</li>
+          <li>Keep your Account credentials confidential and not share them with any third party.</li>
+          <li>Notify Us immediately at <a href={`mailto:${LEGAL_EMAIL}`}>{LEGAL_EMAIL}</a> if you become aware of any unauthorised access to or use of your Account.</li>
+        </ul>
+        <p>You are responsible for all activity that occurs under your Account. We will not be liable for any loss or damage arising from your failure to comply with these obligations.</p>
+        <p>We reserve the right to suspend or terminate any Account that we reasonably believe to be subject to unauthorised access, fraudulent use, or abuse.</p>
+
+        <!-- ── 5. License Grant & Restrictions ───────────── -->
+        <h2>5. License Grant and Restrictions</h2>
+        <h3>5.1 License to You</h3>
+        <p>Subject to your compliance with these Terms and payment of applicable fees, We grant you a limited, non-exclusive, non-transferable, non-sublicensable, revocable licence to access and use the Services for your internal business or personal purposes.</p>
+
+        <h3>5.2 Open-Source Components</h3>
+        <p>PathRefine's public repository (<a href="https://pathrefine.dev" target="_blank" rel="noopener">pathrefine.dev</a>) and certain other components are released under the MIT Licence. Your use of those components is governed by the MIT Licence, not these Terms. These Terms govern your use of the hosted Services (e.g., the PathRefine platform, Figma plugin, and paid tier features) where applicable.</p>
+
+        <h3>5.3 Restrictions</h3>
+        <p>You must not, and must not permit any third party to:</p>
+        <ul>
+          <li>copy, modify, distribute, sell, sublicense, or create derivative works of any Service or its underlying software, except where expressly permitted by an applicable open-source licence;</li>
+          <li>reverse engineer, disassemble, decompile, or otherwise attempt to derive the source code of any proprietary Service component;</li>
+          <li>access any Service by automated means (including scrapers or bots) except through Our published APIs and within published rate limits;</li>
+          <li>circumvent any access controls, authentication mechanisms, rate limits, or usage restrictions;</li>
+          <li>use any Service in a manner that could damage, disable, overburden, or impair Our infrastructure;</li>
+          <li>use any Service to store or transmit malicious code, malware, or any material that infringes third-party rights;</li>
+          <li>resell or provide access to the Services as a standalone competing product without Our prior written consent.</li>
+        </ul>
+
+        <!-- ── 6. User Content & IP ───────────────────────── -->
+        <h2>6. User Content and Intellectual Property</h2>
+        <h3>6.1 Your Content</h3>
+        <p>You retain all intellectual property rights in Content you submit to the Services. By submitting Content, you grant Zero Ops Oy a limited, non-exclusive, royalty-free, worldwide licence to store, process, and transmit your Content solely to the extent necessary to provide the Services to you. This licence terminates when you delete the Content or close your Account.</p>
+        <p>We will not use your Content to train AI models, create benchmark datasets, or improve services for other Users unless you have provided <strong>explicit, separate, freely-given, and revocable opt-in consent</strong> for that specific purpose. Such consent is never a condition of accessing the Services. Where an optional AI training contribution programme is offered, full details — including what data is used, for which model, and the opt-out mechanism — will be presented at the point of consent. You may withdraw consent at any time in your account settings; withdrawal takes effect for new training runs within 30 days but does not require removal of data already incorporated into a deployed model where technically infeasible, a limitation disclosed clearly before you consent.</p>
+
+        <h3>6.2 AI-Generated Content</h3>
+        <p>Where a Service (including EditorInChief, Quillstone's generation endpoint, or PlotTwist) produces AI-Generated Content at your request, you are granted a royalty-free, perpetual licence to use that content subject to: (a) compliance with any applicable AI model licence terms; and (b) your compliance with these Terms. We make no representation that AI-Generated Content is factually accurate, legally compliant, or fit for any particular purpose. You are responsible for reviewing AI-Generated Content before publishing or relying on it.</p>
+
+        <h3>6.3 Our Intellectual Property</h3>
+        <p>Zero Ops Oy and its licensors own all rights, title, and interest in and to the Services, including all software, designs, trademarks, and documentation. Nothing in these Terms transfers any intellectual property rights to you beyond the limited licence in Section 5.1.</p>
+
+        <h3>6.4 Feedback</h3>
+        <p>If you submit feedback, suggestions, or ideas regarding the Services, you grant Us an irrevocable, royalty-free, worldwide licence to use and incorporate such feedback without restriction or compensation to you.</p>
+
+        <!-- ── 7. Prohibited Conduct ──────────────────────── -->
+        <h2>7. Prohibited Conduct</h2>
+        <p>You agree not to use any Service to:</p>
+        <ul>
+          <li>violate any applicable law or regulation, including export control, sanctions, anti-money laundering, or data protection laws;</li>
+          <li>infringe any third party's intellectual property, privacy, publicity, or contractual rights;</li>
+          <li>harass, threaten, defame, or harm any person;</li>
+          <li>publish or distribute content that is illegal, defamatory, obscene, or that promotes violence or discrimination on the basis of protected characteristics;</li>
+          <li>generate, distribute, or monetise disinformation or deliberately false factual claims intended to deceive the public;</li>
+          <li>impersonate any real, living individual or misrepresent your affiliation with any person or entity;</li>
+          <li>generate content involving the sexual exploitation of minors (CSAM);</li>
+          <li>engage in phishing, spoofing, or other fraudulent activities;</li>
+          <li>attempt to gain unauthorised access to any third-party system, account, or network.</li>
+        </ul>
+        <p>We reserve the right to investigate and take appropriate action, including suspension or termination of your Account and reporting to law enforcement, for any violation of this Section.</p>
+
+        <!-- ── 8. Fees, Billing & Auto-Renewal ───────────── -->
+        <h2>8. Fees, Billing, and Auto-Renewal</h2>
+
+        <h3>8.1 Merchant of Record</h3>
+        <p>All paid Subscriptions are processed by <strong>Paddle.com Market Ltd</strong> ("Paddle"), acting as Merchant of Record. Your billing relationship for Subscription payments is with Paddle, not directly with Zero Ops Oy. Paddle's own terms of service and privacy policy apply to payment processing. Any billing queries, VAT invoices, or payment dispute resolutions should be directed to Paddle in the first instance.</p>
+
+        <h3>8.2 Subscription Plans and Pricing</h3>
+        <p>Current pricing for each Service is published on the relevant Service's pricing page. Prices are displayed inclusive of VAT where required under EU law. Zero Ops Oy reserves the right to change prices at any time; changes will take effect at your next billing renewal cycle following 30 days' notice.</p>
+
+        <h3>8.3 Auto-Renewal</h3>
+        <p>Subscriptions renew automatically at the end of each billing period (monthly or annually as selected) unless you cancel before the renewal date. You authorise Paddle to charge your payment method on file for the renewal amount. You can cancel auto-renewal at any time through your account settings or by contacting Paddle.</p>
+
+        <h3>8.4 Right of Withdrawal for EU/EEA Consumers</h3>
+        <p>If you are a Consumer in the EU or EEA, you have a right to withdraw from a distance contract for a digital service within <strong>14 days</strong> of conclusion of the contract without giving any reason, pursuant to the EU Consumer Rights Directive (2011/83/EU) and the Finnish Consumer Protection Act Ch. 6.</p>
+        <p>However, if you expressly request that the service commence during the withdrawal period and acknowledge that you will lose your right of withdrawal once the service has been fully performed, the right of withdrawal is extinguished upon commencement. At account creation and Subscription initiation, you will be presented with this acknowledgement.</p>
+        <p>To exercise the right of withdrawal within the 14-day window (where not waived), contact <a href={`mailto:${LEGAL_EMAIL}`}>{LEGAL_EMAIL}</a> with the subject "Right of Withdrawal" and your account email address.</p>
+
+        <h3>8.5 Refunds</h3>
+        <p>Except as required by applicable law (including mandatory consumer rights), Subscription fees are non-refundable. In cases of genuine service outage exceeding our Service Level expectations, we may offer discretionary credits at our sole determination. Pro-rated refunds for annual plans cancelled mid-term are not provided unless required by applicable law.</p>
+
+        <h3>8.6 Free Tiers</h3>
+        <p>Certain Services offer a free tier. Free tiers are provided at our discretion, may be modified or discontinued at any time (with 30 days' notice), and do not create a contractual entitlement to continued free access.</p>
+
+        <!-- ── 9. Service Supplements ─────────────────────── -->
+        <h2>9. Service-Specific Supplements</h2>
+        <p>The following provisions apply in addition to these Terms for the specific Services listed. In the event of a conflict between a Service Supplement and the general Terms, the Service Supplement governs.</p>
+
+        <h3>9.1 Quillstone (quillstone.dev) — Brand Compliance API</h3>
+        <ul>
+          <li>API usage is subject to per-plan rate limits published on the Quillstone pricing page. Exceeding rate limits will result in HTTP 429 responses; persistent abuse may result in Account suspension.</li>
+          <li>Content submitted to Quillstone API endpoints is processed transiently and is not stored beyond 24 hours except where you explicitly save results in the dashboard. Submitted content is not used to train the underlying AI models.</li>
+          <li>The Quillstone API is provided for content compliance purposes only. We are not liable for compliance decisions you make based on API output.</li>
+        </ul>
+
+        <h3>9.2 Omnivocal (omnivocal.io) — Multi-Channel Publishing</h3>
+        <ul>
+          <li>By connecting third-party social media or publishing accounts (Twitter/X, Bluesky, dev.to, Medium, Hashnode, GitHub) to Omnivocal, you represent that you have authority to publish content to those accounts and to grant Omnivocal API access on your behalf.</li>
+          <li>You are solely responsible for all Content published to third-party platforms via Omnivocal. Zero Ops Oy exercises no editorial control over content you publish and is not liable for the consequences of publishing any content.</li>
+          <li>Third-party platform API availability is outside our control. We will endeavour to maintain adapters for connected platforms but cannot guarantee uninterrupted connectivity.</li>
+          <li>The Omnivocal MCP server is provided for developer use. Any automated publishing workflows you configure are your responsibility.</li>
+        </ul>
+
+        <h3>9.3 Affiguard (affiguard.io) — Affiliate Link Monitoring</h3>
+        <ul>
+          <li>Affiguard monitors URLs you submit by making periodic automated HTTP requests to those URLs. By submitting a URL, you confirm you have the right to monitor that URL or that robustly public access is permitted.</li>
+          <li>Affiguard provides monitoring alerts only; we do not guarantee detection of every broken link or out-of-stock product condition. You remain responsible for verifying the status of your affiliate programme arrangements.</li>
+        </ul>
+
+        <h3>9.4 PathRefine (pathrefine.dev / pathrefine.com) — SVG Path Editor</h3>
+        <ul>
+          <li>The PathRefine open-source library (<code>pathrefine/</code>, MIT Licence) is provided "as is" without warranty of any kind. The MIT Licence governs all use of that library.</li>
+          <li>The PathRefine platform and Figma plugin (paid tier) are governed by these Terms. SVG files you upload for processing are handled as Content Data under our Privacy Policy and are not retained beyond your session unless you explicitly save them.</li>
+          <li>The auto-refine feature available in the paid tier uses heuristic optimisation algorithms. We make no warranty that the output will be visually identical to the input or that it will meet any specific technical standard.</li>
+        </ul>
+
+        <h3>9.5 Wowed (wowed.io / wowed.dev) — Social Proof Widget</h3>
+        <ul>
+          <li>The embeddable Wowed widget may be installed on third-party websites free of charge. By embedding the widget, site owners consent to Wowed recording anonymous reaction counts for their pages and including their site in the Wowed discovery index.</li>
+          <li>Zero Ops Oy reserves the right to remove any site from the Wowed discovery index that violates these Terms or applicable law.</li>
+        </ul>
+
+        <h3>9.6 Reakt.click — Embeddable Reaction Layer</h3>
+        <ul>
+          <li>Aggregated, anonymised reaction trend data collected from embedded Reakt.click widgets may be published publicly on reakt.click and may be made available as a commercial data product. Individual User reaction choices are not attributed to identifiable individuals in any public output.</li>
+          <li>Publishers who embed Reakt.click consent to anonymous aggregation of reaction data from their pages.</li>
+        </ul>
+
+        <h3>9.7 EditorInChief (editorinchief.io) — AI Content Automation</h3>
+        <ul>
+          <li>Content produced by AI journalist personas (Jake, Anna) through EditorInChief is clearly labelled as AI-assisted in accordance with EU AI Act Art. 50 requirements. You must not remove or alter these labels before publication.</li>
+          <li>You are solely responsible for reviewing content generated by EditorInChief before publication. We accept no liability for factual inaccuracies, defamatory content, or regulatory non-compliance in AI-generated drafts that you approve and publish.</li>
+          <li>EditorInChief ingests publicly available RSS feeds and web content as source material. We do not store scraped third-party content beyond the immediate processing session and do not reproduce third-party content verbatim for publication without appropriate attribution or transformation.</li>
+        </ul>
+
+        <h3>9.8 Semitruth.com / AlphaDog.vc / ChinaTech.news — Media Properties</h3>
+        <ul>
+          <li>Content published on these media properties may be AI-Generated Content authored by the Jake or Anna personas. Each article carries a disclosure indicating AI involvement in line with EU AI Act Art. 50.</li>
+          <li>These sites are editorial and satirical / analytical in nature. Semitruth.com in particular publishes satirical content that is not intended to be taken as factual reporting. No reasonable reader should construe satirical content as factual. Nonetheless, we do not knowingly publish false statements of fact designed to deceive.</li>
+          <li>Reader comments and community contributions (where enabled) are subject to a separate Community Guidelines document published on each site.</li>
+        </ul>
+
+        <h3>9.9 PlotTwist.io — Collaborative AI Storytelling</h3>
+        <ul>
+          <li>Story chapters are AI-Generated Content produced on the basis of community votes. By voting on story direction, you grant Zero Ops Oy an irrevocable, royalty-free licence to incorporate the winning vote outcome as story direction input.</li>
+          <li>Votes are anonymous. We collect only the option chosen and a session identifier for anti-stuffing purposes.</li>
+          <li>Completed story arcs and all associated AI-Generated Content are the intellectual property of Zero Ops Oy and may be exploited commercially as part of the Holding Company IP strategy.</li>
+        </ul>
+
+        <!-- ── 10. Disclaimer of Warranties ──────────────── -->
+        <h2>10. Disclaimer of Warranties</h2>
+        <p>THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+        <p>We do not warrant that: (a) the Services will be uninterrupted, error-free, or secure; (b) any defects will be corrected; (c) the Services or the servers that make them available are free of viruses or harmful components; or (d) the results obtained from using the Services will be accurate or reliable.</p>
+        <div class="warn-box">
+          <strong>Consumer note:</strong> Nothing in this Section limits any mandatory statutory warranties or guarantees that apply under Finnish law or the law of your country of residence as a Consumer.
+        </div>
+
+        <!-- ── 11. Limitation of Liability ────────────────── -->
+        <h2>11. Limitation of Liability</h2>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW:</p>
+        <ul>
+          <li>Zero Ops Oy's total aggregate liability for any claim arising out of or in connection with these Terms or the Services will not exceed the greater of: (a) the total fees paid by you to Zero Ops Oy in the 12 months preceding the event giving rise to the claim; or (b) EUR 100.</li>
+          <li>In no event will Zero Ops Oy be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, loss of data, or business interruption, even if advised of the possibility of such damages.</li>
+        </ul>
+        <div class="important-box">
+          <strong>Mandatory exceptions (cannot be excluded):</strong> The limitations above do not apply to: (a) death or personal injury caused by our negligence; (b) fraud or fraudulent misrepresentation; (c) any other liability that cannot be excluded or limited under applicable law, including mandatory consumer protection rights under Finnish law. For Consumer contracts, the limitation of liability will not reduce your rights below the mandatory minimum protections required by the Finnish Consumer Protection Act.
+        </div>
+
+        <!-- ── 12. Indemnification ─────────────────────────── -->
+        <h2>12. Indemnification</h2>
+        <p>To the extent permitted by applicable law, you agree to defend, indemnify, and hold harmless Zero Ops Oy and its officers, directors, employees, and agents from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising out of or in connection with: (a) your use of the Services in breach of these Terms; (b) your Content; (c) your violation of any applicable law; or (d) your infringement of any third-party right.</p>
+        <p>This indemnification obligation does not apply to Consumers to the extent that it would limit mandatory rights under Finnish law.</p>
+
+        <!-- ── 13. Dispute Resolution ─────────────────────── -->
+        <h2>13. Dispute Resolution</h2>
+        <h3>13.1 Informal Resolution</h3>
+        <p>Before initiating formal proceedings, you agree to contact Us at <a href={`mailto:${LEGAL_EMAIL}`}>{LEGAL_EMAIL}</a> and attempt to resolve the dispute informally for a period of at least 30 days from the date of your written notice.</p>
+
+        <h3>13.2 Consumer Out-of-Court Dispute Resolution</h3>
+        <p>If you are a Consumer in the EU/EEA and the dispute is not resolved informally, you may submit a complaint to the <strong>Finnish Consumer Disputes Board</strong> (<em>Kuluttajariitalautakunta</em>), PO Box 306, 00531 Helsinki, Finland, <a href="https://www.kuluttajariita.fi" target="_blank" rel="noopener">kuluttajariita.fi</a>. You may also use the EU Online Dispute Resolution platform at <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. Our contact email for ODR purposes is <a href={`mailto:${LEGAL_EMAIL}`}>{LEGAL_EMAIL}</a>.</p>
+
+        <h3>13.3 Class Action Waiver</h3>
+        <p>For business Users (non-Consumers), any claim under these Terms must be brought individually. You waive any right to bring or participate in a class or consolidated action. This waiver does not apply to Consumer transactions.</p>
+
+        <!-- ── 14. Governing Law & Venue ───────────────────── -->
+        <h2>14. Governing Law and Venue</h2>
+        <p>These Terms are governed by and construed in accordance with the laws of <strong>Finland</strong>, without regard to its conflict of law provisions.</p>
+        <p>Any dispute arising out of or in connection with these Terms that is not resolved informally or through the consumer dispute procedures above will be submitted to the exclusive jurisdiction of the <strong>Helsinki District Court</strong> (<em>Helsingin käräjäoikeus</em>), Finland.</p>
+        <div class="note-box">
+          <strong>Consumer exception:</strong> If you are a Consumer, the mandatory consumer protection laws of your country of habitual residence apply and you may bring proceedings in the courts of that country, or the courts of Finland. We may not bring proceedings against you in any jurisdiction other than your country of habitual residence.
+        </div>
+
+        <!-- ── 15. Changes to Terms ────────────────────────── -->
+        <h2>15. Changes to These Terms</h2>
+        <p>We may update these Terms at any time. We will notify you of material changes — those that materially affect your rights or obligations — by email to the address associated with your Account or via a prominent notice on the affected Service, at least <strong>30 days</strong> before the change takes effect.</p>
+        <p>If you do not agree to the revised Terms, you may terminate your Account before the change takes effect. Continued use of any Service after the notice period constitutes acceptance of the updated Terms.</p>
+        <p>Non-material changes (e.g., clarifications, typographical corrections, addition of new Services that do not affect existing rights) may take effect upon update of the effective date without advance notice.</p>
+
+        <!-- ── 16. Termination ─────────────────────────────── -->
+        <h2>16. Termination and Effect of Termination</h2>
+        <h3>16.1 Termination by You</h3>
+        <p>You may terminate your Account at any time via your account settings or by emailing <a href={`mailto:${LEGAL_EMAIL}`}>{LEGAL_EMAIL}</a>. Termination will take effect within 30 days or at your next billing renewal, whichever comes first. Prepaid Subscription fees are non-refundable unless applicable law requires otherwise.</p>
+
+        <h3>16.2 Termination by Us</h3>
+        <p>We may suspend or terminate your Account and access to the Services immediately and without notice if: (a) you materially breach these Terms; (b) we are required to do so by law; or (c) continuing to provide the Services to you would expose Us to legal or regulatory risk. Where feasible and not precluded by law, we will give you reasonable prior notice and an opportunity to remedy the breach.</p>
+
+        <h3>16.3 Effect of Termination</h3>
+        <p>Upon termination: (a) all licences granted to you under these Terms cease immediately; (b) you must stop using the Services; (c) We will delete your Account data in accordance with Our Privacy Policy and applicable retention obligations; and (d) provisions intended to survive (including Sections 6.3, 7, 10, 11, 12, 14, and 17) will continue in force.</p>
+
+        <!-- ── 17. General Provisions ─────────────────────── -->
+        <h2>17. General Provisions</h2>
+        <h3>17.1 Entire Agreement</h3>
+        <p>These Terms, together with the Privacy Policy and any applicable Service Supplement, constitute the entire agreement between you and Zero Ops Oy with respect to the Services and supersede all prior communications, representations, and agreements.</p>
+
+        <h3>17.2 Severability</h3>
+        <p>If any provision of these Terms is found by a court of competent jurisdiction to be invalid, illegal, or unenforceable, that provision will be modified to the minimum extent necessary to make it enforceable, and the remaining provisions will continue in full force.</p>
+
+        <h3>17.3 Waiver</h3>
+        <p>Our failure to enforce any right or provision of these Terms will not constitute a waiver of that right or provision. Any waiver must be in writing and signed by an authorised representative of Zero Ops Oy.</p>
+
+        <h3>17.4 Assignment</h3>
+        <p>You may not assign or transfer these Terms or any rights under them without Our prior written consent. We may assign these Terms in connection with a merger, acquisition, or sale of assets by giving you 30 days' notice. Consumers retain the right to terminate if a material change in the contracting entity adversely affects their rights.</p>
+
+        <h3>17.5 Force Majeure</h3>
+        <p>Neither party will be liable for delay or failure to perform any obligation under these Terms to the extent caused by events beyond that party's reasonable control, including but not limited to acts of God, natural disasters, pandemic, government action, failure of third-party infrastructure (including cloud provider outages), or internet backbone failures — provided the affected party gives prompt written notice and uses commercially reasonable efforts to mitigate the impact.</p>
+
+        <h3>17.6 No Third-Party Beneficiaries</h3>
+        <p>These Terms do not confer any rights on third parties except where expressly provided.</p>
+
+        <h3>17.7 Language</h3>
+        <p>These Terms are drafted in English. In the event of a conflict between an English version and any translation, the English version governs.</p>
+
+        <h3>17.8 Contact</h3>
+        <p>
+          <strong>Zero Ops Oy (Zero Ops Ltd)</strong><br />
+          Business ID: {BUSINESS_ID}<br />
+          Incorporated in Finland<br />
+          Legal enquiries: <a href={`mailto:${LEGAL_EMAIL}`}>{LEGAL_EMAIL}</a><br />
+          Privacy enquiries: <a href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a>
+        </p>
+
+        <hr class="border-slate-200 my-12" />
+        <p class="text-xs text-slate-400 text-center">
+          Zero Ops Oy · Business ID {BUSINESS_ID} · Incorporated in Finland<br />
+          These Terms of Service were last updated on {EFFECTIVE_DATE}.
+        </p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 px-6 py-8 mt-8">
+      <div class="max-w-4xl mx-auto flex flex-wrap gap-6 items-center justify-between text-sm text-slate-500">
+        <span>© {new Date().getFullYear()} Zero Ops Oy · Business ID {BUSINESS_ID}</span>
+        <div class="flex gap-6">
+          <a href="/privacy" class="hover:text-slate-900 transition-colors">Privacy Policy</a>
+          <a href="/terms" class="hover:text-slate-900 transition-colors font-medium text-slate-700">Terms of Service</a>
+          <a href="/" class="hover:text-slate-900 transition-colors">Home</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,397 @@
+---
+import '../styles/global.css';
+import Logo from '../components/Logo.astro';
+
+const EFFECTIVE_DATE = "6 March 2026";
+const CONTROLLER = "Zero Ops Oy (Zero Ops Ltd)";
+const BUSINESS_ID = "3606514-8";
+const PRIVACY_EMAIL = "privacy@microcorp.dev";
+const CANONICAL_URL = "https://microcorp.dev/privacy";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={CANONICAL_URL} />
+    <meta name="description" content="Zero Ops Oy Privacy Policy — covering all Micro Corp and Macro Corp services." />
+    <title>Privacy Policy — Micro Corp / Zero Ops Oy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, nav span { font-family: 'Space Grotesk', sans-serif; }
+      .legal-body h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700; color: #0f172a; }
+      .legal-body h3 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; font-weight: 600; color: #1e293b; }
+      .legal-body p { margin-bottom: 0.875rem; line-height: 1.75; color: #475569; }
+      .legal-body ul, .legal-body ol { margin: 0.75rem 0 0.875rem 1.5rem; color: #475569; line-height: 1.75; }
+      .legal-body li { margin-bottom: 0.35rem; }
+      .legal-body table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.875rem; }
+      .legal-body th { background: #f1f5f9; padding: 0.625rem 0.875rem; text-align: left; font-weight: 600; color: #334155; border: 1px solid #e2e8f0; }
+      .legal-body td { padding: 0.625rem 0.875rem; border: 1px solid #e2e8f0; color: #475569; vertical-align: top; }
+      .legal-body a { color: #2563eb; text-decoration: underline; }
+      .note-box { background: #f0f9ff; border-left: 3px solid #38bdf8; padding: 0.875rem 1rem; margin: 1rem 0; border-radius: 0 6px 6px 0; font-size: 0.875rem; color: #0369a1; }
+      .warn-box { background: #fff7ed; border-left: 3px solid #fb923c; padding: 0.875rem 1rem; margin: 1rem 0; border-radius: 0 6px 6px 0; font-size: 0.875rem; color: #9a3412; }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-20 bg-white/90 backdrop-blur border-b border-slate-200 px-6 py-4">
+      <div class="max-w-4xl mx-auto flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+          <Logo size="28" />
+          <span class="text-base font-semibold text-slate-900 tracking-widest">Micro Corp</span>
+        </a>
+        <a href="/" class="text-sm text-slate-500 hover:text-slate-900 transition-colors">← Back to Home</a>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="max-w-4xl mx-auto px-6 py-16">
+      <div class="mb-10">
+        <p class="text-xs font-mono uppercase tracking-widest text-blue-600 mb-3">Zero Ops Oy · Y-tunnus {BUSINESS_ID}</p>
+        <h1 class="text-4xl font-bold text-slate-900 mb-3">Privacy Policy</h1>
+        <p class="text-slate-500 text-sm">
+          Effective date: {EFFECTIVE_DATE} &nbsp;·&nbsp;
+          Canonical URL: <a href={CANONICAL_URL} class="text-blue-600 underline">{CANONICAL_URL}</a>
+        </p>
+        <div class="note-box mt-6">
+          This Policy applies to all websites, applications, APIs, and services operated by <strong>Zero Ops Oy</strong> under the Micro Corp and Macro Corp brands, including but not limited to: microcorp.dev, macrocorp.dev, Omnivocal, Quillstone, PathRefine, Affiguard, Wowed, Reakt.click, EditorInChief, Semitruth, AlphaDog, ChinaTech.news, and PlotTwist ("the Services"). By using any Service you confirm you have read and understood this Policy.
+        </div>
+      </div>
+
+      <div class="legal-body">
+
+        <!-- ── 1. Definitions ─────────────────────────────── -->
+        <h2>1. Definitions</h2>
+        <p>In this Policy, the following terms have the meanings set out below.</p>
+        <table>
+          <tr><th>Term</th><th>Meaning</th></tr>
+          <tr><td><strong>"We", "Us", "Our"</strong></td><td>Zero Ops Oy (Zero Ops Ltd), Business ID {BUSINESS_ID}, a private limited company incorporated in Finland, the data controller for all Services.</td></tr>
+          <tr><td><strong>"Services"</strong></td><td>All websites, web applications, APIs, browser extensions, plugins, and related software operated by Zero Ops Oy, as listed in the introduction above.</td></tr>
+          <tr><td><strong>"User", "You"</strong></td><td>Any natural person or legal entity that accesses or uses any Service.</td></tr>
+          <tr><td><strong>"Personal Data"</strong></td><td>Any information relating to an identified or identifiable natural person, as defined in GDPR Art. 4(1).</td></tr>
+          <tr><td><strong>"Content Data"</strong></td><td>Text, images, URLs, or other material that You submit to a Service for processing (e.g., content submitted to Quillstone for brand compliance analysis, affiliate URLs submitted to Affiguard).</td></tr>
+          <tr><td><strong>"Usage Data"</strong></td><td>Technical data generated automatically when You interact with a Service, including IP addresses, browser type, device identifiers, pages visited, and API request metadata.</td></tr>
+          <tr><td><strong>"GDPR"</strong></td><td>Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016.</td></tr>
+          <tr><td><strong>"EEA"</strong></td><td>The European Economic Area.</td></tr>
+        </table>
+
+        <!-- ── 2. Data Controller ────────────────────────── -->
+        <h2>2. Data Controller</h2>
+        <p>The data controller in respect of all Services is:</p>
+        <p>
+          <strong>Zero Ops Oy (Zero Ops Ltd)</strong><br />
+          Business ID: {BUSINESS_ID}<br />
+          Incorporated in Finland<br />
+          Email: <a href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a>
+        </p>
+        <p>A Data Protection Officer is not mandatorily required at our current scale of processing under GDPR Art. 37. You may direct all privacy enquiries to the privacy contact above.</p>
+
+        <!-- ── 3. Data We Collect ────────────────────────── -->
+        <h2>3. Data We Collect</h2>
+
+        <h3>3.1 Data You Provide Directly</h3>
+        <ul>
+          <li><strong>Account registration data:</strong> email address, name, and password (stored as a salted hash) when you create an account via Supabase Auth.</li>
+          <li><strong>Profile data:</strong> optional display name, avatar URL, and organisation name.</li>
+          <li><strong>Content Data:</strong> any text, URLs, documents, brand guidelines, or other material you submit to a Service for processing.</li>
+          <li><strong>Support communications:</strong> messages you send to Us by email or via any in-app support channel.</li>
+          <li><strong>Voting and reaction data:</strong> choices and reactions you submit on interactive platform Services (PlotTwist, Reakt.click).</li>
+        </ul>
+
+        <h3>3.2 Data Collected Automatically</h3>
+        <ul>
+          <li><strong>Usage Data:</strong> IP address (truncated after 24 hours for analytics), HTTP request method and path, response status, request duration, User-Agent string, and referring URL.</li>
+          <li><strong>API usage metadata:</strong> API key identifier (never the key itself), endpoint called, token consumption, and timestamp — used for rate limiting, billing, and abuse prevention.</li>
+          <li><strong>Authentication tokens:</strong> short-lived JSON Web Tokens (JWTs) issued by Supabase, stored in memory or a secure HttpOnly cookie, never in localStorage.</li>
+        </ul>
+
+        <h3>3.3 Data from Third Parties</h3>
+        <ul>
+          <li><strong>OAuth identity providers:</strong> if you choose to log in with GitHub or Google, we receive your name, email address, and provider user ID from the OAuth exchange. We do not receive your password.</li>
+          <li><strong>Paddle (billing):</strong> Paddle acts as Merchant of Record for all paid Services. Paddle shares with us a customer ID, subscription status, plan identifier, and billing country. We do not receive or store full payment card data.</li>
+        </ul>
+
+        <h3>3.4 Inferred and Derived Data</h3>
+        <ul>
+          <li><strong>Usage tier and billing status:</strong> derived from Paddle subscription events.</li>
+          <li><strong>Brand guidelines and compliance profiles:</strong> aggregated from Content Data you submit to Quillstone; used solely to improve your brand compliance results and not shared with other Users.</li>
+        </ul>
+
+        <!-- ── 4. How We Use Your Data ──────────────────── -->
+        <h2>4. How We Use Your Data</h2>
+        <p>We process Personal Data only for the purposes listed below. For each purpose we identify the applicable lawful basis under GDPR Art. 6.</p>
+
+        <table>
+          <tr><th>Purpose</th><th>Data categories used</th><th>Lawful basis (GDPR Art. 6)</th></tr>
+          <tr>
+            <td>Providing and operating the Services you have requested</td>
+            <td>Account data, Content Data, API usage metadata, authentication tokens</td>
+            <td>Art. 6(1)(b) — Performance of a contract</td>
+          </tr>
+          <tr>
+            <td>Managing your subscription, processing payments, and issuing invoices</td>
+            <td>Account data, Paddle customer ID, billing country</td>
+            <td>Art. 6(1)(b) — Performance of a contract; Art. 6(1)(c) — Legal obligation (Finnish Accounting Act, Ch. 2)</td>
+          </tr>
+          <tr>
+            <td>Security monitoring, fraud detection, rate limiting, and abuse prevention</td>
+            <td>Usage Data, API usage metadata, IP address</td>
+            <td>Art. 6(1)(f) — Legitimate interests (security of the Services and Users)</td>
+          </tr>
+          <tr>
+            <td>Sending transactional communications (account confirmations, password resets, approval notifications, billing receipts)</td>
+            <td>Account data, Usage Data</td>
+            <td>Art. 6(1)(b) — Performance of a contract</td>
+          </tr>
+          <tr>
+            <td>Sending product update and feature announcement emails</td>
+            <td>Account data</td>
+            <td>Art. 6(1)(f) — Legitimate interests (informing existing customers of material changes to Services they use); or Art. 6(1)(a) — Consent where required</td>
+          </tr>
+          <tr>
+            <td>Improving, debugging, and developing the Services</td>
+            <td>Usage Data, anonymised aggregations of API usage metadata</td>
+            <td>Art. 6(1)(f) — Legitimate interests (product improvement; data is anonymised or aggregated before use for this purpose)</td>
+          </tr>
+          <tr>
+            <td>Complying with legal obligations (tax records, supervisory authority requests)</td>
+            <td>Account data, billing data</td>
+            <td>Art. 6(1)(c) — Legal obligation</td>
+          </tr>
+        </table>
+
+        <p><strong>AI model training requires your separate, explicit consent.</strong> Content you submit to any Service for processing (e.g., brand compliance audits, affiliate link checks) is processed transiently to deliver the result of your request. We will not use your Content Data to build, fine-tune, or benchmark machine learning models unless you have given explicit, freely-given, informed, and revocable consent for that specific purpose, separate from your acceptance of these terms and any other consent.</p>
+        <p>Where we offer an optional AI training contribution programme (for example, contributing anonymised brand-compliance examples to improve the Quillstone model), participation will be: (a) strictly opt-in via a dedicated consent toggle in your account settings; (b) described with specificity as to what data is used, for which model, and for how long; and (c) revocable at any time, with cessation of use of your data for new training runs within 30 days of withdrawal. Withdrawal of consent does not affect data already incorporated into a deployed model where technical removal is not feasible — this limitation will be disclosed clearly at the point of consent.</p>
+        <p>The lawful basis for any such processing is Art. 6(1)(a) GDPR (consent). Consent records are retained for the duration of your account plus 3 years to demonstrate compliance.</p>
+
+        <!-- ── 5. How We Share Your Data ─────────────────── -->
+        <h2>5. How We Share Your Data</h2>
+        <p><strong>We do not sell your Personal Data.</strong> We do not share your Personal Data with third parties for their own marketing or advertising purposes.</p>
+        <p>We share Personal Data with the following categories of recipients, solely to the extent necessary to operate the Services:</p>
+
+        <table>
+          <tr><th>Recipient</th><th>Role</th><th>Data shared</th><th>Location</th></tr>
+          <tr>
+            <td><strong>Cloudflare, Inc.</strong></td>
+            <td>Data processor — hosting, edge compute (Workers), database (D1), storage (R2), DNS, and DDoS protection</td>
+            <td>All data processed in the course of operating the Services transits or is stored on Cloudflare infrastructure</td>
+            <td>USA (EU-US Data Privacy Framework participant)</td>
+          </tr>
+          <tr>
+            <td><strong>Supabase, Inc.</strong></td>
+            <td>Data processor — user authentication and identity management</td>
+            <td>Account registration data, OAuth identity tokens, session data</td>
+            <td>USA / EU region (EU-US Data Privacy Framework participant; EU region selected where available)</td>
+          </tr>
+          <tr>
+            <td><strong>Paddle.com Market Ltd</strong></td>
+            <td>Merchant of Record — payment processing and subscription management</td>
+            <td>Account email, billing country, subscription data; Paddle independently collects payment card data</td>
+            <td>United Kingdom (UK adequacy decision in force)</td>
+          </tr>
+          <tr>
+            <td><strong>Telegram Messenger Inc.</strong></td>
+            <td>Data processor — delivery of in-app approval and notification messages via Telegram bot</td>
+            <td>Your Telegram chat ID (if you configure Telegram notifications) and the content of notification messages</td>
+            <td>UAE / international infrastructure</td>
+          </tr>
+          <tr>
+            <td><strong>GitHub, Inc. (Microsoft)</strong></td>
+            <td>Data processor — source code hosting and automated content deployment via GitHub Actions</td>
+            <td>Content committed to repositories you connect; no account Personal Data unless you link a GitHub OAuth account</td>
+            <td>USA (EU-US Data Privacy Framework participant)</td>
+          </tr>
+        </table>
+
+        <p>We may also disclose Personal Data to competent authorities, courts, or regulators where required by applicable law, or to protect the rights, safety, or property of Us, our Users, or third parties.</p>
+        <p>In the event of a merger, acquisition, or sale of substantially all of our assets, Personal Data may be transferred to the successor entity, subject to equivalent protection obligations.</p>
+
+        <!-- ── 6. International Transfers ──────────────────── -->
+        <h2>6. International Transfers</h2>
+        <p>Zero Ops Oy is incorporated in Finland and operates within the EEA. However, several of our data processors are located in the United States or other third countries.</p>
+        <p>Transfers of Personal Data to the United States are made on the basis of:</p>
+        <ul>
+          <li>The <strong>EU-US Data Privacy Framework</strong> (Commission Implementing Decision (EU) 2023/1795) for recipients certified thereunder (Cloudflare, Supabase, GitHub/Microsoft); and</li>
+          <li><strong>Standard Contractual Clauses</strong> (Commission Implementing Decision (EU) 2021/914) where DPF certification is not applicable or has lapsed.</li>
+        </ul>
+        <p>Transfers to Paddle.com Market Ltd in the United Kingdom are made on the basis of the Commission's adequacy decision for the UK in force as of the effective date of this Policy.</p>
+        <p>Transfers to Telegram Messenger Inc. are made under Standard Contractual Clauses. You may opt out of Telegram notifications at any time in your account settings, which ceases Personal Data transfer to Telegram.</p>
+
+        <!-- ── 7. Cookies & Tracking ─────────────────────── -->
+        <h2>7. Cookies and Tracking Technologies</h2>
+        <p>We use a minimal set of cookies. We do not use advertising cookies, tracking pixels, or cross-site behavioural tracking of any kind.</p>
+        <table>
+          <tr><th>Cookie name / type</th><th>Purpose</th><th>Duration</th><th>Required?</th></tr>
+          <tr>
+            <td>Session authentication cookie (HttpOnly, Secure)</td>
+            <td>Maintains your authenticated session in dashboard interfaces. Set by Supabase Auth.</td>
+            <td>Session / 7 days (persistent login)</td>
+            <td>Yes — functional; no consent required</td>
+          </tr>
+          <tr>
+            <td>CSRF token cookie</td>
+            <td>Protects authenticated requests against cross-site request forgery.</td>
+            <td>Session</td>
+            <td>Yes — functional; no consent required</td>
+          </tr>
+          <tr>
+            <td>Cloudflare cookies (_cf_bm, cf_clearance)</td>
+            <td>Bot management and DDoS protection set by Cloudflare at the network layer.</td>
+            <td>30 minutes / 24 hours</td>
+            <td>Yes — functional; no consent required</td>
+          </tr>
+        </table>
+        <p>Public-facing marketing pages (microcorp.dev, macrocorp.dev) do not set any cookies unless you initiate an authenticated session.</p>
+
+        <!-- ── 8. Data Retention ─────────────────────────── -->
+        <h2>8. Data Retention</h2>
+        <table>
+          <tr><th>Data category</th><th>Retention period</th><th>Basis</th></tr>
+          <tr>
+            <td>Account data (email, name, hashed password)</td>
+            <td>Duration of your account, plus 30 days after account deletion to allow recovery requests</td>
+            <td>Performance of contract</td>
+          </tr>
+          <tr>
+            <td>Content Data submitted for Service processing</td>
+            <td>Retained only for the duration necessary to deliver the requested result; purged within 24 hours of processing unless you have explicitly saved it to your account</td>
+            <td>Performance of contract</td>
+          </tr>
+          <tr>
+            <td>API usage logs (endpoint, token count, timestamp, API key ID)</td>
+            <td>90 days (rolling), then automatically deleted by scheduled cleanup</td>
+            <td>Legitimate interests (abuse prevention, billing verification)</td>
+          </tr>
+          <tr>
+            <td>Billing records and invoices</td>
+            <td>7 years from the date of the transaction</td>
+            <td>Legal obligation — Finnish Accounting Act (Kirjanpitolaki, 1336/1997), Ch. 2 § 10</td>
+          </tr>
+          <tr>
+            <td>Security and access logs (IP address, HTTP status, timestamp)</td>
+            <td>30 days, after which IPs are truncated and logs are retained in anonymised form for a further 60 days</td>
+            <td>Legitimate interests (security)</td>
+          </tr>
+          <tr>
+            <td>Support correspondence</td>
+            <td>3 years from last communication, unless a legal claim is pending</td>
+            <td>Legitimate interests (service quality, legal defence)</td>
+          </tr>
+          <tr>
+            <td>Soft-deleted account data</td>
+            <td>30 days post-deletion, then permanently purged</td>
+            <td>Performance of contract / Legitimate interests</td>
+          </tr>
+        </table>
+
+        <!-- ── 9. Your Rights ───────────────────────────── -->
+        <h2>9. Your Rights</h2>
+
+        <h3>9.1 Rights Under GDPR (EEA and UK Users)</h3>
+        <p>If you are located in the EEA or the United Kingdom, you have the following rights under the GDPR and UK GDPR respectively:</p>
+        <ul>
+          <li><strong>Right of access (Art. 15):</strong> to obtain confirmation of whether we process your Personal Data and a copy of it.</li>
+          <li><strong>Right to rectification (Art. 16):</strong> to correct inaccurate or incomplete Personal Data.</li>
+          <li><strong>Right to erasure (Art. 17):</strong> to request deletion of your Personal Data where the legal basis for processing no longer applies.</li>
+          <li><strong>Right to restriction of processing (Art. 18):</strong> to request that we restrict processing of your Personal Data in certain circumstances.</li>
+          <li><strong>Right to data portability (Art. 20):</strong> to receive your Personal Data in a structured, machine-readable format where processing is based on consent or contract performance.</li>
+          <li><strong>Right to object (Art. 21):</strong> to object to processing based on legitimate interests; we will cease processing unless we demonstrate compelling legitimate grounds that override your interests.</li>
+          <li><strong>Right to withdraw consent (Art. 7(3)):</strong> where processing is based on consent, to withdraw it at any time without affecting the lawfulness of prior processing.</li>
+          <li><strong>Right to lodge a complaint (Art. 77):</strong> to lodge a complaint with the Finnish data protection supervisory authority, the <strong>Office of the Data Protection Ombudsman</strong> (<em>Tietosuojavaltuutetun toimisto</em>), PO Box 800, FI-00531 Helsinki, Finland, <a href="https://tietosuoja.fi" target="_blank" rel="noopener">tietosuoja.fi</a>. You may also lodge a complaint with the supervisory authority of your place of habitual residence.</li>
+        </ul>
+        <p>To exercise any of the above rights, contact us at <a href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a>. We will respond within 30 days. We may need to verify your identity before fulfilling your request.</p>
+
+        <h3>9.2 Rights for California Residents (CCPA / CPRA)</h3>
+        <p>If you are a consumer resident in California, you have the following additional rights under the California Consumer Privacy Act (as amended by the California Privacy Rights Act):</p>
+        <ul>
+          <li><strong>Right to know:</strong> to request disclosure of the categories of Personal Information collected, the sources from which it is collected, the purposes for which it is used, and the categories of third parties to whom it is disclosed.</li>
+          <li><strong>Right to delete:</strong> to request deletion of Personal Information we have collected, subject to certain exceptions.</li>
+          <li><strong>Right to correct:</strong> to request correction of inaccurate Personal Information.</li>
+          <li><strong>Right to opt out of sale or sharing:</strong> <strong>We do not sell or share Personal Information</strong> with third parties for cross-context behavioural advertising. No opt-out mechanism is required.</li>
+          <li><strong>Right to limit use of sensitive Personal Information:</strong> we do not collect sensitive personal information as defined under CPRA beyond what is strictly necessary for account authentication.</li>
+          <li><strong>Right to non-discrimination:</strong> we will not discriminate against you for exercising any CCPA/CPRA right.</li>
+        </ul>
+        <p>To exercise California rights, contact <a href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a> with "California Privacy Request" in the subject line. We will respond within 45 days.</p>
+
+        <!-- ── 10. AI-Generated Content & EU AI Act ─────── -->
+        <h2>10. AI-Generated Content Disclosure</h2>
+        <p>Several Services operated by Zero Ops Oy involve the generation of content by artificial intelligence, including but not limited to: EditorInChief.io (AI journalist personas Jake and Anna), Quillstone.dev (AI content correction and generation), and PlotTwist.io (AI-authored story chapters).</p>
+        <p>In compliance with Article 50 of Regulation (EU) 2024/1689 (the EU AI Act), content produced by AI systems that could be mistaken for human-authored content will carry a clear disclosure at the point of publication. Specifically:</p>
+        <ul>
+          <li>Articles published on Semitruth.com and AlphaDog.vc by AI journalist personas will be labelled as AI-assisted or AI-generated.</li>
+          <li>Story chapters generated by AI on PlotTwist.io will be identified as AI-authored.</li>
+          <li>No AI persona operated by Zero Ops Oy is designed to impersonate a real, existing individual.</li>
+        </ul>
+        <p>Personal Data you submit for processing by AI features within our Services is processed as Content Data under Section 3.1 above and is not used to train AI models.</p>
+
+        <!-- ── 11. Children's Privacy ────────────────────── -->
+        <h2>11. Children's Privacy</h2>
+        <p>Our Services are not directed to individuals under the age of 16. We do not knowingly collect Personal Data from children under 16. The minimum age for creating an account with any Service is 16 years.</p>
+        <p>If you are a parent or guardian and believe your child under 16 has provided Personal Data to us, contact us at <a href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a> and we will delete that data promptly.</p>
+        <div class="warn-box">
+          In the context of PlotTwist.io, which involves community participation, age verification mechanisms appropriate to the risk level of the service will be implemented prior to public launch.
+        </div>
+
+        <!-- ── 12. Security ──────────────────────────────── -->
+        <h2>12. Security</h2>
+        <p>We implement technical and organisational measures appropriate to the risk of processing, including:</p>
+        <ul>
+          <li>TLS 1.3 encryption for all data in transit.</li>
+          <li>Encryption at rest for all data stored in Cloudflare D1 and R2.</li>
+          <li>API keys stored as SHA-256 hashed values; full key values are displayed only at the time of generation.</li>
+          <li>Passwords stored as bcrypt-hashed values via Supabase Auth; we never store plaintext passwords.</li>
+          <li>Cloudflare Access (Zero Trust) protecting all internal administrative interfaces.</li>
+          <li>Principle of least privilege applied to all service-to-service bindings.</li>
+        </ul>
+        <p>No transmission over the internet can be guaranteed to be 100% secure. If you become aware of a security vulnerability or data breach involving our Services, please contact <a href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a> immediately.</p>
+
+        <!-- ── 13. Changes ──────────────────────────────── -->
+        <h2>13. Changes to This Policy</h2>
+        <p>We may update this Policy from time to time. The effective date at the top of this page reflects the date of the most recent revision. For material changes — those that affect how we process Personal Data in a manner adverse to you — we will provide at least 30 days' advance notice via email to the address associated with your account or via a prominent notice on the relevant Service.</p>
+        <p>If you disagree with a material change, you may terminate your account before the change takes effect; continued use of any Service after the notice period constitutes acceptance of the revised Policy.</p>
+        <p>A version history is maintained at <a href="https://github.com/microcorp/legal" target="_blank" rel="noopener">github.com/microcorp/legal</a> (planned).</p>
+
+        <!-- ── 14. Contact ──────────────────────────────── -->
+        <h2>14. Contact and Supervisory Authority</h2>
+        <p>
+          <strong>Privacy Contact</strong><br />
+          Zero Ops Oy (Zero Ops Ltd)<br />
+          Business ID: {BUSINESS_ID}<br />
+          Email: <a href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a>
+        </p>
+        <p>
+          <strong>Finnish Supervisory Authority</strong><br />
+          Office of the Data Protection Ombudsman<br />
+          (<em>Tietosuojavaltuutetun toimisto</em>)<br />
+          PO Box 800, FI-00531 Helsinki, Finland<br />
+          <a href="https://tietosuoja.fi" target="_blank" rel="noopener">tietosuoja.fi</a>
+        </p>
+
+        <hr class="border-slate-200 my-12" />
+        <p class="text-xs text-slate-400 text-center">
+          Zero Ops Oy · Business ID {BUSINESS_ID} · Incorporated in Finland<br />
+          This Privacy Policy was last updated on {EFFECTIVE_DATE}.
+        </p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 px-6 py-8 mt-8">
+      <div class="max-w-4xl mx-auto flex flex-wrap gap-6 items-center justify-between text-sm text-slate-500">
+        <span>© {new Date().getFullYear()} Zero Ops Oy · Business ID {BUSINESS_ID}</span>
+        <div class="flex gap-6">
+          <a href="/privacy" class="hover:text-slate-900 transition-colors font-medium text-slate-700">Privacy Policy</a>
+          <a href="/terms" class="hover:text-slate-900 transition-colors">Terms of Service</a>
+          <a href="/" class="hover:text-slate-900 transition-colors">Home</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
