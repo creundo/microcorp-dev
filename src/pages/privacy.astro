@@ -108,7 +108,9 @@ const CANONICAL_URL = "https://microcorp.dev/privacy";
         <ul>
           <li><strong>Usage Data:</strong> IP address (truncated after 24 hours for analytics), HTTP request method and path, response status, request duration, User-Agent string, and referring URL.</li>
           <li><strong>API usage metadata:</strong> API key identifier (never the key itself), endpoint called, token consumption, and timestamp — used for rate limiting, billing, and abuse prevention.</li>
-          <li><strong>Authentication tokens:</strong> short-lived JSON Web Tokens (JWTs) issued by Supabase, stored in memory or a secure HttpOnly cookie, never in localStorage.</li>
+          <li><strong>Authentication tokens:</strong> short-lived JSON Web Tokens (JWTs) issued by Supabase Auth for authenticated dashboard users are stored in memory or a secure HttpOnly cookie. <strong>We do not store authentication session tokens in browser localStorage.</strong> (Note: the Reakt.click widget separately uses localStorage for reaction state on publisher pages — see Section 7.1.)</li>
+          <li><strong>Reakt.click widget — Visitor ID:</strong> When the Reakt.click <code>widget.js</code> is embedded on a publisher's page and you click a reaction button, the widget reads (or generates via <code>crypto.randomUUID()</code>) a <code>visitor_id</code> stored in your browser's localStorage under the key <code>reakt:vid</code>. This UUID is sent to our API as a deduplication key to prevent the same browser from submitting duplicate reactions for the same button and article. The <code>visitor_id</code> is <strong>not derived from your IP address or User-Agent</strong>; Reakt.click cannot link it to your identity. It persists in localStorage until cleared by you or the publisher's domain data is cleared.</li>
+          <li><strong>Reakt.click widget — rate-limit fingerprint:</strong> To prevent volumetric abuse, <code>POST /v1/react</code> computes a short-lived identifier: <code>SHA-256(IP address + User-Agent + widget_key)</code>. This is stored in Cloudflare KV with a <strong>24-hour automatic expiry</strong> and is never written to our database. It is not linked to any account and cannot identify you individually.</li>
         </ul>
 
         <h3>3.3 Data from Third Parties</h3>
@@ -160,6 +162,11 @@ const CANONICAL_URL = "https://microcorp.dev/privacy";
             <td>Art. 6(1)(f) — Legitimate interests (product improvement; data is anonymised or aggregated before use for this purpose)</td>
           </tr>
           <tr>
+            <td>Recording and deduplicating reader reactions on publisher pages via the Reakt.click embedded widget (reaction counts, top-article lists, discovery feed, velocity analysis)</td>
+            <td>Visitor ID (browser-generated <code>crypto.randomUUID()</code> from localStorage — not PII); reaction choice (button clicked, article URL, widget key, timestamp); rate-limit fingerprint (ephemeral SHA-256 hash of IP + UA + widget key, KV only, 24h TTL, never in database)</td>
+            <td>Art. 6(1)(f) — Legitimate interests (operating the Reakt.click reaction service; enabling accurate publisher reaction counts and top-article lists; powering the public discovery feed). No overriding interest: no name, email, or network-derived identifier is stored in the database; the Visitor ID is browser-generated and not linkable to an individual by us.</td>
+          </tr>
+          <tr>
             <td>Complying with legal obligations (tax records, supervisory authority requests)</td>
             <td>Account data, billing data</td>
             <td>Art. 6(1)(c) — Legal obligation</td>
@@ -200,6 +207,12 @@ const CANONICAL_URL = "https://microcorp.dev/privacy";
             <td>Data processor — delivery of in-app approval and notification messages via Telegram bot</td>
             <td>Your Telegram chat ID (if you configure Telegram notifications) and the content of notification messages</td>
             <td>UAE / international infrastructure</td>
+          </tr>
+          <tr>
+            <td><strong>Brevo (Sendinblue SAS)</strong></td>
+            <td>Data processor — transactional email delivery (account confirmations, subscription receipts, billing notifications, publisher activation sequences, and weekly digest emails)</td>
+            <td>Account email address and the content of each transactional message</td>
+            <td>France / EU (EU-incorporated; no adequacy decision required for EEA transfers). Tracking pixels and open-tracking are suppressed at the API call level — Brevo does not receive read-receipt data for emails we send.</td>
           </tr>
           <tr>
             <td><strong>GitHub, Inc. (Microsoft)</strong></td>
@@ -249,6 +262,13 @@ const CANONICAL_URL = "https://microcorp.dev/privacy";
         </table>
         <p>Public-facing marketing pages (microcorp.dev, macrocorp.dev) do not set any cookies unless you initiate an authenticated session.</p>
 
+        <h3>7.1 Web Storage (localStorage) — Reakt.click Widget</h3>
+        <p>The Reakt.click widget (<code>widget.js</code>), when embedded on a third-party publisher's page, writes entries to your browser's Web Storage (localStorage). This is distinct from cookies: it is not transmitted to any server and is not accessible by Zero Ops Oy from the server side. Its sole purpose is client-side reaction state — preserving which reaction buttons you have clicked so that your voted state is displayed correctly if you revisit the article.</p>
+        <p><strong>What is written:</strong> Keys of the form <code>reakt:{widget_key}:{article_url}:{button_id}</code> with a value of <code>"voted"</code> or absent. The key encodes only which reaction you left on which article via which widget. It contains no name, email address, or other direct identifier.</p>
+        <p><strong>Persistence:</strong> These entries persist in your browser until you clear Local Storage for the publisher's domain, or until you clear all browser data. Zero Ops Oy does not read this data from its servers.</p>
+        <p><strong>Legal basis:</strong> This storage is used to deliver the reaction functionality you explicitly invoked. Under ePrivacy rules (Directive 2002/58/EC and national implementations), publishers who embed the Reakt.click widget are required by our Publisher Terms of Service to disclose this Local Storage use in their own cookie notices or consent management platforms, including for visitors in ePrivacy-regulated jurisdictions.</p>
+        <p><strong>How to remove it:</strong> Open your browser's developer tools (Application → Local Storage → the publisher's domain), and delete any entries prefixed with <code>reakt:</code>. Alternatively, clearing all site data for the publisher's domain will remove these entries.</p>
+
         <!-- ── 8. Data Retention ─────────────────────────── -->
         <h2>8. Data Retention</h2>
         <table>
@@ -287,6 +307,11 @@ const CANONICAL_URL = "https://microcorp.dev/privacy";
             <td>Soft-deleted account data</td>
             <td>30 days post-deletion, then permanently purged</td>
             <td>Performance of contract / Legitimate interests</td>
+          </tr>
+          <tr>
+            <td>Reakt.click reaction data (Visitor ID, button choice, article URL, widget key, timestamp)</td>
+            <td>Retained for <strong>3 years</strong> from the date of the reaction, or until the associated publisher site is deleted (cascade deletion removes reactions automatically), whichever comes first. The Visitor ID is a random UUID with no link to any personal account. The rate-limit fingerprint (SHA-256(IP+UA+widget_key)) expires after <strong>24 hours</strong> in Cloudflare KV and is never written to the database.</td>
+            <td>Legitimate interests (publisher top lists, discovery feed, trend analysis)</td>
           </tr>
         </table>
 
@@ -332,7 +357,8 @@ const CANONICAL_URL = "https://microcorp.dev/privacy";
 
         <!-- ── 11. Children's Privacy ────────────────────── -->
         <h2>11. Children's Privacy</h2>
-        <p>Our Services are not directed to individuals under the age of 16. We do not knowingly collect Personal Data from children under 16. The minimum age for creating an account with any Service is 16 years.</p>
+        <p>Our Services are not directed to individuals under the age of 16. We do not knowingly collect Personal Data from children under 16. The minimum age for creating a publisher account with any Service is 16 years.</p>
+        <p><strong>COPPA (US):</strong> The Reakt.click widget embeds on third-party publisher pages. Publishers are required by our Publisher Terms of Service to warrant that their site is not directed to children under 13 (the threshold under the US Children's Online Privacy Protection Act, 15 U.S.C. §6501 et seq.) and to refrain from embedding the widget on any site that is directed to, or knowingly collects data from, children under 13. If you are a publisher operating a child-directed site, you must not embed the Reakt.click widget.</p>
         <p>If you are a parent or guardian and believe your child under 16 has provided Personal Data to us, contact us at <a href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a> and we will delete that data promptly.</p>
         <div class="warn-box">
           In the context of PlotTwist.io, which involves community participation, age verification mechanisms appropriate to the risk level of the service will be implemented prior to public launch.
