@@ -1,0 +1,71 @@
+---
+import '../styles/global.css';
+import Logo from '../components/Logo.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  businessId: string;
+  activePage?: 'privacy' | 'terms';
+}
+
+const { title, description, canonical, businessId, activePage } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      .legal-body h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700; color: #0f172a; }
+      .legal-body h3 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1rem; font-weight: 600; color: #1e293b; }
+      .legal-body p { margin-bottom: 0.875rem; line-height: 1.75; color: #475569; }
+      .legal-body ul, .legal-body ol { margin: 0.75rem 0 0.875rem 1.5rem; color: #475569; line-height: 1.75; }
+      .legal-body li { margin-bottom: 0.35rem; }
+      .legal-body table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.875rem; }
+      .legal-body th { background: #f1f5f9; padding: 0.625rem 0.875rem; text-align: left; font-weight: 600; color: #334155; border: 1px solid #e2e8f0; }
+      .legal-body td { padding: 0.625rem 0.875rem; border: 1px solid #e2e8f0; color: #475569; vertical-align: top; }
+      .legal-body a { color: #2563eb; text-decoration: underline; }
+      .note-box { background: #f0f9ff; border-left: 3px solid #38bdf8; padding: 0.875rem 1rem; margin: 1rem 0; border-radius: 0 6px 6px 0; font-size: 0.875rem; color: #0369a1; }
+      .warn-box { background: #fff7ed; border-left: 3px solid #fb923c; padding: 0.875rem 1rem; margin: 1rem 0; border-radius: 0 6px 6px 0; font-size: 0.875rem; color: #9a3412; }
+      .important-box { background: #fef2f2; border-left: 3px solid #f87171; padding: 0.875rem 1rem; margin: 1rem 0; border-radius: 0 6px 6px 0; font-size: 0.875rem; color: #991b1b; }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-20 bg-white/90 backdrop-blur border-b border-slate-200 px-6 py-4">
+      <div class="max-w-4xl mx-auto flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+          <Logo size="28" />
+          <span class="text-base font-semibold text-slate-900 tracking-widest" style="font-family: 'Space Grotesk', sans-serif;">Micro Corp</span>
+        </a>
+        <a href="/" class="text-sm text-slate-500 hover:text-slate-900 transition-colors">← Back to Home</a>
+      </div>
+    </header>
+
+    <slot />
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 px-6 py-8 mt-8">
+      <div class="max-w-4xl mx-auto flex flex-wrap gap-6 items-center justify-between text-sm text-slate-500">
+        <span>© {new Date().getFullYear()} Zero Ops Oy · Business ID {businessId}</span>
+        <div class="flex gap-6">
+          <a href="/privacy" class:list={["hover:text-slate-900 transition-colors", activePage === 'privacy' && "font-medium text-slate-700"]}>Privacy Policy</a>
+          <a href="/terms" class:list={["hover:text-slate-900 transition-colors", activePage === 'terms' && "font-medium text-slate-700"]}>Terms of Service</a>
+          <a href="/" class="hover:text-slate-900 transition-colors">Home</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
