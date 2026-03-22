@@ -1,10 +1,10 @@
-# Micro Corp Website
+# Microcorp Website
 
-The official website for **Micro Corp** (microcorp.dev) - The Light Side of the Macro Corporate Global Alliance.
+The official website for **Microcorp** (microcorp.dev) - The Light Side of the Zero Ops Oy.
 
 ## Overview
 
-Built by AI, Directed by Humans. This is the public face of Micro Corp, showcasing our autonomous SaaS ecosystem and the tools that power the Alliance.
+Built by AI, Directed by Humans. This is the public face of Microcorp, showcasing our autonomous SaaS ecosystem and the tools that power the Alliance.
 
 ## Design Philosophy
 
@@ -88,8 +88,8 @@ Optimized for **Cloudflare Pages**:
 
 We don't just invest in the future. We code it.
 
-Part of Macro Corporate Global Alliance Oy.
+Part of Zero Ops Oy.
 
 ## License
 
-© 2026 Macro Corporate Global Alliance Oy. All rights reserved.
+© 2026 Zero Ops Oy. All rights reserved.

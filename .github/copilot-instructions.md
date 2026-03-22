@@ -1,7 +1,7 @@
-# Micro Corp Website - Copilot Instructions
+# Microcorp Website - Copilot Instructions
 
 ## Project Overview
-This is the official website for Micro Corp (microcorp.dev) - the "Light Side" of the Macro Corporate Global Alliance. Built with Astro, Tailwind CSS, and TypeScript for optimal performance and deployment on Cloudflare Pages.
+This is the official website for Microcorp (microcorp.dev) - the "Light Side" of the Zero Ops Oy. Built with Astro, Tailwind CSS, and TypeScript for optimal performance and deployment on Cloudflare Pages.
 
 ## Design Philosophy
 - **Light Side Aesthetic**: Clean, bright, glassmorphism design with white/light gray backgrounds
@@ -27,7 +27,7 @@ This is the official website for Micro Corp (microcorp.dev) - the "Light Side" o
 ## Key Messages
 - "Built by AI, Directed by Humans"
 - "Macro Vision, Micro Action"
-- Part of Macro Corporate Global Alliance Oy
+- Part of Zero Ops Oy
 - Zero Ops, Maximum Impact
 
 ## Development Guidelines
